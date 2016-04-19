@@ -10,7 +10,6 @@ maxi = 80
 
 if (batteryStats('capacity') < str(mini)):
     if (batteryStats('status').lower() == 'discharging'):
-        #print "yes"
         dialogs.make('warning', 'Battery level below threshold. Please connect a charger.')
 
 if (int(batteryStats('capacity')) >= maxi):
