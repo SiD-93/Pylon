@@ -16,3 +16,6 @@ if (batteryStats('capacity') < str(mini)):
 if (int(batteryStats('capacity')) >= maxi):
     if (batteryStats('status').lower() == 'charging'):
         dialogs.make('info', 'Battery levels optimal. Please disconnect the charger.')
+
+if (batteryStats('capacity').lower() == 'full'):
+    dialogs.make('info', 'Battery full. Please disconnect the charger.')
