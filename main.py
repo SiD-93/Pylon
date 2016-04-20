@@ -1,20 +1,25 @@
 #!/usr/bin/env python2
-import dialogs
-
+import config, os.path
+from pythonzenity import *
 def batteryStats(str) :
     getStat = '/sys/class/power_supply/BAT1/' + str
     return open(getStat, 'r').read().strip()
 
-mini = 40
-maxi = 80
+if (os.path.exists('./conf.json')) == False:
+    setConf = Question(title='Pylon', text='No defaults set. Set now?')
+    if setConf == -8:
+        config.confWrite()
+    else:
+        Error(title='Pylon', text='No defaults set.')
 
-if (batteryStats('capacity') < str(mini)):
+if (batteryStats('capacity') < str(config.confRead('minThreshold'))):
     if (batteryStats('status').lower() == 'discharging'):
-        dialogs.make('warning', 'Battery level below threshold. Please connect a charger.')
+        Message(title='Pylon', text='Battery level below threshold. Please connect a charger.')
 
-if (int(batteryStats('capacity')) >= maxi):
+if (int(batteryStats('capacity')) > int(config.confRead('maxThreshold'))):
     if (batteryStats('status').lower() == 'charging'):
-        dialogs.make('info', 'Battery levels optimal. Please disconnect the charger.')
+        Message(title='Pylon', text='Battery levels optimal. Please disconnect the charger.')
 
-if (batteryStats('capacity').lower() == 'full'):
-    dialogs.make('info', 'Battery full. Please disconnect the charger.')
+if (int(batteryStats('capacity')) == 100):
+    if (batteryStats('status').lower() == 'full'):
+        Message(title='Pylon', text='Battery full. Please disconnect the charger.')
