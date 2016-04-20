@@ -17,6 +17,7 @@
 * Generally unstructured code.
 
 # TODO
-* Daemonize Pylon.
-* Figure out how to use with Cron (or cronie).
-
+- [ ]Daemonize Pylon.
+- [ ]Figure out how to use with Cron (or cronie).
+- [ ]Structure code better.
+- [ ]Remove shaky dependencies.
