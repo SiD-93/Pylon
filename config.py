@@ -3,17 +3,17 @@ from pythonzenity import *
 config = { }
 
 def confWrite():
-    minimum = Entry(title='Pylon Config', text='Enter the minimum threshold: ')
-    maximum = Entry(title='Pylon Config', text='Enter the maximum threshold: ')
+    minimum = Entry(title='Ampyre Config', text='Enter the minimum threshold: ')
+    maximum = Entry(title='Ampyre Config', text='Enter the maximum threshold: ')
     if (minimum == '' or maximum == ''):
-        Warning(title='Pylon Config', text='Threshold(s) not set. Please set to continue.')
+        Warning(title='Ampyre Config', text='Threshold(s) not set. Please set to continue.')
         confWrite()
     else:
         config = {'minThreshold': minimum, 'maxThreshold': maximum}
         with open('conf.json', 'w') as f:
             json.dump(config, f)
             f.close()
-        Message(title='Pylon Config', text='Thresholds set.')
+        Message(title='Ampyre Config', text='Thresholds set.')
 
 def confRead(confValue):
     with open('conf.json', 'r') as f:
