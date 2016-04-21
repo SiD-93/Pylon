@@ -26,7 +26,7 @@
 * Better config file handling.
 
 # TODO
+- [x] Remove shaky dependencies.
 - [ ] Daemonize Ampyre.
 - [ ] Figure out how to use with Cron (or cronie).
-- [ ] Structure code better.
-- [x] Remove shaky dependencies.
+- [ ] Structure code better (follow a Python packaging guide).
