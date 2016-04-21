@@ -1,6 +1,6 @@
-# Pylon - A simplistic battery monitor.
+# Ampyre - A simplistic battery monitor.
 
-[Battery University](http://www.batteryuniversity.com) recommends that you charge your battery within a 40-80 % range for optimum performance and longevity. Pylon frequently polls your current charge level to let you know if you're in the safe zone.
+[Battery University](http://www.batteryuniversity.com) recommends that you charge your battery within a 40-80 % range for optimum performance and longevity. Ampyre frequently polls your current charge level to let you know if you're in the safe zone.
 
 ## Dependencies:
 
@@ -26,7 +26,7 @@
 * Better config file handling.
 
 # TODO
-- [ ] Daemonize Pylon.
+- [ ] Daemonize Ampyre.
 - [ ] Figure out how to use with Cron (or cronie).
 - [ ] Structure code better.
 - [x] Remove shaky dependencies.
