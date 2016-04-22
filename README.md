@@ -20,7 +20,7 @@
 * Generally unstructured code.
 
 ## v0.9.1
-* Forewent reinventing the wheel by using [Python-Zenity](https://github.com/poulp/python-zenity).
+* Forewent (yes, that's a real word) reinventing the wheel by using [Python-Zenity](https://github.com/poulp/python-zenity).
 * Added basic error handling.
 * Added more dialogs (more interactive).
 * Better config file handling.
