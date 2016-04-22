@@ -14,7 +14,7 @@ if (os.path.exists('./conf.json')) == False:
 
 if (batteryStats('capacity') < str(config.confRead('minThreshold'))):
     if (batteryStats('status').lower() == 'discharging'):
-        Message(title='Ampyre', text='Battery level below threshold. Please connect a charger.')
+        Error(title='Ampyre', text='Battery level below threshold. Please connect a charger.')
 
 if (int(batteryStats('capacity')) > int(config.confRead('maxThreshold'))):
     if (batteryStats('status').lower() == 'charging'):
