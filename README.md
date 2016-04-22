@@ -28,5 +28,6 @@
 # TODO
 - [x] Remove shaky dependencies.
 - [ ] Daemonize Ampyre.
-- [ ] Figure out how to use with Cron (or cronie).
+- [ ] Cron (use Python-Crontab) and Anacron.
 - [ ] Structure code better (follow a Python packaging guide).
+- [ ] Setup config directories.
