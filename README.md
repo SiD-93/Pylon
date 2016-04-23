@@ -2,6 +2,8 @@
 
 [Battery University](http://www.batteryuniversity.com) recommends that you charge your battery within a 40-80 % range for optimum performance and longevity. Ampyre frequently polls your current charge level to let you know if you're in the safe zone.
 
+**Will not run at all under *any* version of Windows.**
+
 ## Dependencies:
 
 ### Python Standard Library modules:
