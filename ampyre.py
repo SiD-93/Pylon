@@ -86,14 +86,24 @@ def main():
             # Warn user and quit.
             Error(title='Ampyre', text='No defaults set.')
 
+    # If battery level is below lower threshold;
     if (batteryStats('capacity') < str(confRead('lowThreshold'))):
+        # and it is discharging.
         if (batteryStats('status').lower() == 'discharging'):
+            # Warn user.
             Error(title='Ampyre', text='Battery level below threshold. Please connect a charger.')
 
+    # If battery level is above higher threshold;
     if (int(batteryStats('capacity')) > int(confRead('upThreshold'))):
+        # and is still charging.
         if (batteryStats('status').lower() == 'charging'):
+            # Inform user.
             Message(title='Ampyre', text='Battery levels optimal. Please disconnect the charger.')
 
+    # If battery is full.
     if (int(batteryStats('capacity')) == 100):
+        # Get user to disconnect charger.
         Message(title='Ampyre', text='Battery full. Please disconnect the charger.')
+
+# Calling main() manually; still need to check with a packaging guide if this is required.
 main()
