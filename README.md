@@ -39,3 +39,5 @@
 - [ ] Cron (use Python-Crontab) and/or Anacron.
 - [ ] Weigh cron alternatives - [APScheduler](https://github.com/agronholm/apscheduler/), [Supervisor](https://github.com/Supervisor/supervisor), [Daemonize](https://github.com/thesharp/daemonize), and more.
 - [ ] Structure code better (follow a Python packaging guide).
+- [ ] Add a shell script to add to Cron or setup Ampyre in general.
+- [ ] Cookiecutter?
